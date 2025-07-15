@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator & Currency Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculator & Currency Converter</h1>
+<div class="container">
+  
+  <button id="toggleMode">Switch to Converter</button>
+
+  <div class="flip-container">
+    
+    <div class="flipper" id="flipper">
+
+      <div class="front interface calculator" id="calculator">
+        <h2>Calculator</h2>
+        <div class="display" id="calcDisplay">
+            <div id="calcExpression">0<span class="cursor"></span></div>
+            <div id="calcResult"></div>
+        </div>
+        <div class="buttons">
+          <button class="btn function" onclick="clearCalc()">AC</button>
+          <button class="btn function" onclick="backspace()">⌫</button>
+          <button class="btn function" onclick="append('**')">xʸ</button>
+          <button class="btn operator" onclick="append('%')">%</button>
+
+          <button class="btn number" onclick="append('7')">7</button>
+          <button class="btn number" onclick="append('8')">8</button>
+          <button class="btn number" onclick="append('9')">9</button>
+          <button class="btn operator" onclick="append('/')">÷</button>
+
+          <button class="btn number" onclick="append('4')">4</button>
+          <button class="btn number" onclick="append('5')">5</button>
+          <button class="btn number" onclick="append('6')">6</button>
+          <button class="btn operator" onclick="append('*')">×</button>
+
+          <button class="btn number" onclick="append('1')">1</button>
+          <button class="btn number" onclick="append('2')">2</button>
+          <button class="btn number" onclick="append('3')">3</button>
+          <button class="btn operator" onclick="append('-')">-</button>
+
+          <button class="btn number" onclick="append('0')">0</button>
+          <button class="btn number" onclick="append('.')">.</button>
+          <button class="btn equal" onclick="calculate()">=</button>
+          <button class="btn operator" onclick="append('+')">+</button>
+        </div>
+      </div>
+    
+      <div class="back interface converter" id="converter">
+  <h2>Currency Converter</h2>
+
+  <input type="number" id="amount" placeholder="Amount">
+
+  <div class="row">
+    <select id="from">
+      <option value="AUD">AUD - Australian Dollar</option>
+      <option value="AED">AED - UAE Dirham</option>
+      <option value="BRL">BRL - Brazilian Real</option>
+      <option value="CAD">CAD - Canadian Dollar</option>
+      <option value="CHF">CHF - Swiss Franc</option>
+      <option value="CNY">CNY - Chinese Yuan</option>
+      <option value="EUR">EUR - Euro</option>
+      <option value="USD">USD - United States Dollar</option>
+      <option value="GBP">GBP - British Pound</option>
+      <option value="HKD">HKD - Hong Kong Dollar</option>
+      <option value="INR">INR - Indian Rupee</option>
+      <option value="JPY">JPY - Japanese Yen</option>
+      <option value="KRW">KRW - South Korean Won</option>
+      <option value="MXN">MXN - Mexican Peso</option>
+      <option value="NZD">NZD - New Zealand Dollar</option>
+      <option value="NOK">NOK - Norwegian Krone</option>
+      <option value="RUB">RUB - Russian Ruble</option>
+      <option value="SGD">SGD - Singapore Dollar</option>
+      <option value="SEK">SEK - Swedish Krona</option>
+      <option value="ZAR">ZAR - South African Rand</option>
+    </select>
+
+    <select id="to">
+      <option value="AUD">AUD - Australian Dollar</option>
+      <option value="AED">AED - UAE Dirham</option>
+      <option value="BRL">BRL - Brazilian Real</option>
+      <option value="CAD">CAD - Canadian Dollar</option>
+      <option value="CHF">CHF - Swiss Franc</option>
+      <option value="CNY">CNY - Chinese Yuan</option>
+      <option value="EUR">EUR - Euro</option>
+      <option value="USD">USD - United States Dollar</option>
+      <option value="GBP">GBP - British Pound</option>
+      <option value="HKD">HKD - Hong Kong Dollar</option>
+      <option value="INR">INR - Indian Rupee</option>
+      <option value="JPY">JPY - Japanese Yen</option>
+      <option value="KRW">KRW - South Korean Won</option>
+      <option value="MXN">MXN - Mexican Peso</option>
+      <option value="NZD">NZD - New Zealand Dollar</option>
+      <option value="NOK">NOK - Norwegian Krone</option>
+      <option value="RUB">RUB - Russian Ruble</option>
+      <option value="SGD">SGD - Singapore Dollar</option>
+      <option value="SEK">SEK - Swedish Krona</option>
+      <option value="ZAR">ZAR - South African Rand</option>
+    </select>
+  </div>
+
+  <button onclick="convert()">Convert</button>
+  <p id="convResult"></p>
+</div>
+</div>
+
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator & Currency Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculator & Currency Converter</h1>
+
+<div class="container">
+  
+  <button id="toggleMode">Switch to Converter</button>
+
+  <div class="flip-container">
+    <div class="flipper" id="flipper">
+
+       Calculator 
+      <div class="front interface calculator" id="calculator">
+        <h2>Calculator</h2>
+        <div class="display" id="calcDisplay">
+            <div id="calcExpression">0<span class="cursor"></span></div>
+            <div id="calcResult"></div>
+        </div>
+        <div class="buttons">
+          <button class="btn function" onclick="clearCalc()">AC</button>
+          <button class="btn function" onclick="backspace()">⌫</button>
+          <button class="btn function" onclick="append('**')">xʸ</button>
+          <button class="btn operator" onclick="append('%')">%</button>
+
+          <button class="btn number" onclick="append('7')">7</button>
+          <button class="btn number" onclick="append('8')">8</button>
+          <button class="btn number" onclick="append('9')">9</button>
+          <button class="btn operator" onclick="append('/')">÷</button>
+
+          <button class="btn number" onclick="append('4')">4</button>
+          <button class="btn number" onclick="append('5')">5</button>
+          <button class="btn number" onclick="append('6')">6</button>
+          <button class="btn operator" onclick="append('*')">×</button>
+
+          <button class="btn number" onclick="append('1')">1</button>
+          <button class="btn number" onclick="append('2')">2</button>
+          <button class="btn number" onclick="append('3')">3</button>
+          <button class="btn operator" onclick="append('-')">-</button>
+
+          <button class="btn number" onclick="append('0')">0</button>
+          <button class="btn number" onclick="append('.')">.</button>
+          <button class="btn equal" onclick="calculate()">=</button>
+          <button class="btn operator" onclick="append('+')">+</button>
+        </div>
+      </div>
+
+       Converter wrapped properly 
+      <div class="converter-wrapper">
+        <div class="back interface converter" id="converter">
+          <h2>Currency Converter</h2>
+
+          <input type="number" id="amount" placeholder="Amount">
+
+          <div class="row">
+            <select id="from">
+              <option value="USD">USD - United States Dollar</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="GBP">GBP - British Pound</option>
+              <option value="JPY">JPY - Japanese Yen</option>
+              <option value="AUD">AUD - Australian Dollar</option>
+              <option value="CAD">CAD - Canadian Dollar</option>
+              <option value="CHF">CHF - Swiss Franc</option>
+              <option value="CNY">CNY - Chinese Yuan</option>
+              <option value="HKD">HKD - Hong Kong Dollar</option>
+              <option value="INR">INR - Indian Rupee</option>
+              <option value="NZD">NZD - New Zealand Dollar</option>
+              <option value="SGD">SGD - Singapore Dollar</option>
+              <option value="KRW">KRW - South Korean Won</option>
+              <option value="ZAR">ZAR - South African Rand</option>
+              <option value="SEK">SEK - Swedish Krona</option>
+              <option value="NOK">NOK - Norwegian Krone</option>
+              <option value="MXN">MXN - Mexican Peso</option>
+              <option value="BRL">BRL - Brazilian Real</option>
+              <option value="RUB">RUB - Russian Ruble</option>
+              <option value="AED">AED - UAE Dirham</option>
+            </select>
+
+            <select id="to">
+              <option value="USD">USD - United States Dollar</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="GBP">GBP - British Pound</option>
+              <option value="JPY">JPY - Japanese Yen</option>
+              <option value="AUD">AUD - Australian Dollar</option>
+              <option value="CAD">CAD - Canadian Dollar</option>
+              <option value="CHF">CHF - Swiss Franc</option>
+              <option value="CNY">CNY - Chinese Yuan</option>
+              <option value="HKD">HKD - Hong Kong Dollar</option>
+              <option value="INR">INR - Indian Rupee</option>
+              <option value="NZD">NZD - New Zealand Dollar</option>
+              <option value="SGD">SGD - Singapore Dollar</option>
+              <option value="KRW">KRW - South Korean Won</option>
+              <option value="ZAR">ZAR - South African Rand</option>
+              <option value="SEK">SEK - Swedish Krona</option>
+              <option value="NOK">NOK - Norwegian Krone</option>
+              <option value="MXN">MXN - Mexican Peso</option>
+              <option value="BRL">BRL - Brazilian Real</option>
+              <option value="RUB">RUB - Russian Ruble</option>
+              <option value="AED">AED - UAE Dirham</option>
+            </select>
+          </div>
+
+          <button onclick="convert()">Convert</button>
+          <p id="convResult"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+-->
