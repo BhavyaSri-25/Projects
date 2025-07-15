@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fleur+De+Leah&family=Imperial+Script&family=Jersey+15&family=Lavishly+Yours&family=Mea+Culpa&family=Monsieur+La+Doulaise&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&family=Rouge+Script&family=Tangerine:wght@400;700&display=swap');
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 2em;
+  
+  background-image: url('weather_2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  background: white;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.container:hover{
+    transform: scale(1.03);
+}
+
+input {
+  padding: 0.5em;
+  width: 200px;
+  margin-bottom: 1em;
+}
+
+button {
+  padding: 0.5em 1em;
+  margin-left: 0.5em;
+}
+
+.weather {
+  margin-top: 2em;
+}
+
+.hidden {
+  display: none;
+}
+
+.Title{
+    font-family: "DM Serif Text", serif;
+    font-weight: 220;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.sub_title{
+    font-family: "Playwrite AU SA", serif;
+    font-weight: 500;
+}
+
+.weather-btn {
+  background-color: #00aaff;
+  color: white;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.weather-btn:hover {
+  background-color: #008ecc;
+}
