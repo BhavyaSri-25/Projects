@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    /*background: #cfc0e5 no-repeat center center fixed;*/
+    /*background: #fff0f5 no-repeat center center fixed;*/
+    background: url('todo_List.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 50%;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-style: italic;
+}
+
+.add-form, .edit-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.add-form input[type="text"],
+.add-form input[type="date"],
+.add-form select,
+.edit-form input[type="text"],
+.edit-form input[type="date"],
+.edit-form select {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+li.done {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.actions a {
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.filters a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #4289b8;
+}
+
+.filters a.active {
+    font-weight: bold;
+    color: #26648e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    /*background: #cfc0e5 no-repeat center center fixed;
+    background: #fff0f5 no-repeat center center fixed;
+    
+    background-size: cover;
+}
+
+.container {
+    width: 50%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.add-form, .edit-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.add-form input[type="text"],
+.add-form input[type="date"],
+.add-form select,
+.edit-form input[type="text"],
+.edit-form input[type="date"],
+.edit-form select {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #27ae60;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #208f4e;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+li.done {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.actions a {
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.filters a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #27ae60;
+}
+
+.filters a.active {
+    font-weight: bold;
+    color: #0c9445;
+}
+*/

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flask To-Do List</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>📝 To-Do List </h1>
+
+    <form action="/add" method="post" class="add-form">
+        <input type="text" name="task" placeholder="Enter a task" required>
+        <input type="date" name="due_date">
+        <select name="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <button type="submit">Add</button>
+    </form>
+
+    <div class="filters">
+        <a href="/?filter=all" class="{{ 'active' if filter_status=='all' }}">All</a>
+        <a href="/?filter=pending" class="{{ 'active' if filter_status=='pending' }}">Pending</a>
+        <a href="/?filter=completed" class="{{ 'active' if filter_status=='completed' }}">Completed</a>
+    </div>
+
+    <ul>
+        {% for todo in todos %}
+        <li class="{{ 'done' if todo.done }}">
+            <form action="/edit/{{ todo.id }}" method="post" class="edit-form">
+                <input type="text" name="task" value="{{ todo.task }}" required>
+                <input type="date" name="due_date" value="{{ todo.due_date or '' }}">
+                <select name="priority">
+                    <option value="Low" {% if todo.priority=='Low' %}selected{% endif %}>Low</option>
+                    <option value="Medium" {% if todo.priority=='Medium' %}selected{% endif %}>Medium</option>
+                    <option value="High" {% if todo.priority=='High' %}selected{% endif %}>High</option>
+                </select>
+                <button type="submit">💾</button>
+            </form>
+            <div class="actions">
+                <a href="/done/{{ todo.id }}">✅</a>
+                <a href="/delete/{{ todo.id }}">❌</a>
+            </div>
+        </li>
+        {% else %}
+        <li>No tasks yet!</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
+
+
+
+
+
